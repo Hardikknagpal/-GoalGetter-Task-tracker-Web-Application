@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+        
+    
+  
+
+  <!-- FORM -->
+
+  <div class="container my-3">
+    <h2>Update Your To-do's List </h2>
+    <form action="/update/{{todo.sno}}" method="POST">
+      <div class="my-3">
+        <label for="title" class="form-label">To-do's</label>
+        <input type="text" class="form-control" name="title" id="title" value = "{{todo.title}}" placeholder="Work to be done">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">To-do's Description</label>
+        <textarea class="form-control" value = "{{todo.desc}}" name="desc" id="desc"  rows="3"></textarea>
+      </div>
+      <!--Submit Button  -->
+      <button type="submit" class="btn btn-dark">Update</button>
+    </form>
+
+  </div>
+
+  <!-- TABLE -->
+
+ 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+    {% endblock body %}
+
